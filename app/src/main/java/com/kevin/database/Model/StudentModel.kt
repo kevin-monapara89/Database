@@ -1,11 +1,19 @@
 package com.kevin.database.Model
 
-class StudentModel(i: Int, name: String, surname: String, std: String) {
+import android.widget.EditText
+
+class StudentModel {
 
     var id:Int = 0
-    lateinit var name: String
-    lateinit var surname: String
-    var std:Int = 0
+    var name: String
+    var surname: String
+    var std: String
 
+    constructor(id: Int, name: String, surname: String, std: String) {
+        this.id = id
+        this.name = name
+        this.surname = surname
+        this.std = std
 
+    }
 }

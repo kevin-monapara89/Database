@@ -15,8 +15,8 @@ class DbHelper(
     val TABLE_NAME = "student"
 
     override fun onCreate(p0: SQLiteDatabase?) {
-        var sql = "CREATE TABLE student(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, surname TEXT, std INT)"
-        p0?.execSQL(sql)!!
+        var sql = "CREATE TABLE $TABLE_NAME(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, surname TEXT, std INTEGER)"
+        p0?.execSQL(sql)
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
@@ -35,6 +35,5 @@ class DbHelper(
         } else {
             Log.e(TAG, "addStudents: ===================== Data is Inserted.///////////////////////")
         }
-
     }
 }
